@@ -8,11 +8,10 @@ DynamoRio Client Practice
 
 - wiki: https://github.com/DynamoRIO/dynamorio/wiki/Downloads
 
-
 practices
 ~~~~~~~~~
-- myclient is sample in tutorial(CGO 2016)
-- inscount is api sample
+- myclient is a sample in tutorial(CGO 2016)
+- inscount is in api sample
 
 build it
 ~~~~~~~~
@@ -20,13 +19,22 @@ build it
 2. build ::
 
 
-   mkdir build/
-   cd build/
-   cmake -G "Unix Makefiles" ..
-   make
-   # target is build/libinscount.so, build/libmyclient.so
+     mkdir build/
+     cd build/
+     cmake -G "Unix Makefiles" ..
+     make
+     # target is build/libinscount.so, build/libmyclient.so
    
 3. usage ::
 
-   dyrun -c build/libinscount.so -- ls
-   dyrun -c build/libmyclient.so -- ls
+     dyrun -c build/libinscount.so -- ls
+     dyrun -c build/libmyclient.so -- ls
+
+Misc
+----
+build DynamoRio from source dependency::
+
+    [Arch Linux]
+        pacman -S cmake imagemagick doxygen transfig ghostscript
+        # gcc / multilib related tool
+
